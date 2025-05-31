@@ -42,6 +42,9 @@
     <ClCompile Include="eOperationType.h">
       <Filter>Header Files</Filter>
     </ClCompile>
+    <ClCompile Include="AbstractSolver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DirectedGraph.h">
@@ -63,6 +66,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="JugState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
