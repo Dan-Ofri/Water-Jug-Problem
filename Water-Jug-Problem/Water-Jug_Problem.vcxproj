@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{e4d5845f-d91f-4ed1-adfb-1b3993bd8c6a}</ProjectGuid>
+    <ProjectGuid>{EFF0252F-4273-430D-88FB-8C18BCC336B9}</ProjectGuid>
     <RootNamespace>WaterJugProblem</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ProjectName>Water-Jug-Problem</ProjectName>
