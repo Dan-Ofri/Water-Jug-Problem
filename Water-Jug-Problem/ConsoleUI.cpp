@@ -1,6 +1,6 @@
 #include "ConsoleUI.h"
 
-
+// Read user input for jug sizes, target, algorithm, and runtime option
 void ConsoleUI::ReadInput(int& o_L, int& o_S, int& o_W, int& o_Impl, bool& o_ShowRuntime)
 {
     std::cout << "Enter the capacity of the large jug (L): ";
@@ -18,16 +18,17 @@ void ConsoleUI::ReadInput(int& o_L, int& o_S, int& o_W, int& o_Impl, bool& o_Sho
         throw std::invalid_argument("Invalid input: expected integers.");
     }
 
-    checkInput(o_L, o_S, o_W, o_Impl, o_ShowRuntime);
+    checkInput(o_L, o_S, o_W, o_Impl, o_ShowRuntime); // Validate input
 }
 
+// Print the solution steps and result
 void ConsoleUI::printSolution(const Solution& solution) const
 {
     if (solution.success) {
         int i = 1;
         std::cout << "Number of operations: " << solution.operationCount << "\nOperations:\n";
         for (const auto& step : solution.steps) {
-            std::cout << i << ". " << step.toString() << "\n";
+            std::cout << i << ". " << step.toString() << "\n"; // Print each step
             i++;
         }
     }
@@ -36,6 +37,7 @@ void ConsoleUI::printSolution(const Solution& solution) const
     }
 }
 
+// Validate and check user input
 void ConsoleUI::checkInput(int& i_L, int& i_S, int& i_W, int& i_Impl, bool& i_ShowRuntime)
 {
     if (i_L <= 0 || i_S <= 0 || i_W < 0 || i_W > i_L) {
@@ -52,7 +54,8 @@ void ConsoleUI::checkInput(int& i_L, int& i_S, int& i_W, int& i_Impl, bool& i_Sh
     }
 }
 
+// Print the runtime of the algorithm
 void ConsoleUI::printRuntime(long long i_runtime) const
 {
-    std::cout << "Function took " << i_runtime << " microseconds." << std::endl;
+    std::cout << "Function took " << i_runtime << " microseconds." << std::endl; // Print runtime
 }

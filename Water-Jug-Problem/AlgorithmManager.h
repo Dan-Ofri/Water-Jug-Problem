@@ -9,19 +9,13 @@
 
 class AlgorithmManager
 {
-    int m_L;
-    int m_S;
-    int m_W;
-    ConsoleUI m_consoleUI;
+    int m_L; // Large jug size
+    int m_S; // Small jug size
+    int m_W; // Target amount
+    ConsoleUI m_consoleUI; // Console UI handler
 
 public:
-    /*AlgorithmManager(int i_L, int i_S, int i_W)
-        : m_L(i_L), m_S(i_S), m_W(i_W) {
-    }*/
-
-    bool Run();
-
-    std::unique_ptr<AbstractSolver> createSolver(int impl) const;
-    void printRuntime(long long runtime) const;
-
+    bool Run(); // Run the algorithm manager
+    std::unique_ptr<AbstractSolver> createSolver(int impl) const; // Create solver based on implementation
+    void printRuntime(long long runtime) const; // Print runtime information
 };

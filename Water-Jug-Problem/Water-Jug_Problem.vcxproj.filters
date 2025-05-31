@@ -33,9 +33,6 @@
     <ClCompile Include="BFSLazySolver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="JugState.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Step.h">
       <Filter>Header Files</Filter>
     </ClCompile>

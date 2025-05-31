@@ -134,7 +134,6 @@
     <ClCompile Include="BFSLazySolver.cpp" />
     <ClCompile Include="ConsoleUI.cpp" />
     <ClCompile Include="DirectedGraph.cpp" />
-    <ClCompile Include="JugState.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="eOperationType.h" />
     <ClCompile Include="Step.h" />

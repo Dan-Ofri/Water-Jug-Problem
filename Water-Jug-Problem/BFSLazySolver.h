@@ -10,15 +10,15 @@
 
 class BFSLazySolver : public AbstractSolver
 {
-	std::unordered_set<JugState> m_Visited;
-	std::unordered_map<JugState, JugState> m_Parents;
+	std::unordered_set<JugState> m_Visited; // Visited states
+	std::unordered_map<JugState, JugState> m_Parents; // Parent state for each state
 
 public:
+	// Constructor: initialize with jug sizes and target
 	BFSLazySolver(int i_L, int i_S, int i_W)
 		: AbstractSolver(i_L, i_S, i_W) {
 	}
-	Solution solve() override;
-	Solution BuildSolution(std::unordered_map<JugState, eOperationType>& opFromParent);
 
+	Solution solve() override; // Solve the water jug problem using lazy BFS
+	Solution BuildSolution(std::unordered_map<JugState, eOperationType>& opFromParent); // Build the solution path from parent and operation maps
 };
-

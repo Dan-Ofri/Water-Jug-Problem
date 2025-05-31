@@ -7,12 +7,11 @@
 
 class DirectedGraph
 {
-	std::vector<std::pair<JugState, std::list<JugState>>> m_Vertices;
+	std::vector<std::list<JugState>> m_AdjLists;
 
 public:
-
-	void MakeEmptyGraph(int n);
-	void AddEdge(const JugState& u, const JugState& v);
-	std::list<JugState> getAdjList(const JugState& u);
-	const std::vector<std::pair<JugState, std::list<JugState>>>& getVertices() const;
+	int StateToIndex(const JugState& state, int s) const; // Get index for a state
+	void MakeEmptyGraph(int n); // Initialize empty graph with n nodes
+	void AddEdge(const JugState& u, const JugState& v, int s); // Add directed edge u -> v
+	std::list<JugState> GetAdjList(const JugState& u, int s) const; // Get adj list for state u
 };
