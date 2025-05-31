@@ -1,2 +1,1 @@
-Enter the capacity of the large jug (L): Enter the capacity of the small jug (S): Enter the target amount of water (W): Choose implementation (1 for BFS Full Graph, 2 for BFS Lazy): Show runtime? (1 for Yes, 0 for No): No solution.
-Function took 7161896 microseconds.
+Enter the capacity of the large jug (L): Enter the capacity of the small jug (S): Enter the target amount of water (W): Choose implementation (1 for BFS Full Graph, 2 for BFS Lazy): Show runtime? (1 for Yes, 0 for No): Invalid input: capacities must be positive and target must be within range.

@@ -17,6 +17,11 @@ bool AlgorithmManager::Run()
 		std::cout << e.what() << std::endl;
 		exit(1);
 	}
+	catch (...)
+	{
+		std::cout << "An error occurred" << std::endl;
+		exit(1);
+	}
 
 	return showRuntime;
 }
@@ -28,7 +33,7 @@ std::unique_ptr<AbstractSolver> AlgorithmManager::createSolver(int impl) const {
 	else if (impl == 2)
 		return std::unique_ptr<AbstractSolver>(new BFSLazySolver(m_L, m_S, m_W)); // Lazy BFS
 	else
-		throw std::invalid_argument("invalid input");
+		throw std::invalid_argument("invalid input.");
 }
 
 // Print runtime information

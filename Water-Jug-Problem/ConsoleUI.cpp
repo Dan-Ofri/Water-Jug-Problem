@@ -15,7 +15,7 @@ void ConsoleUI::ReadInput(int& o_L, int& o_S, int& o_W, int& o_Impl, bool& o_Sho
     std::cin >> o_ShowRuntime;
 
     if (std::cin.fail()) {
-        throw std::invalid_argument("Invalid input: expected integers.");
+        throw std::invalid_argument("invalid input");
     }
 
     checkInput(o_L, o_S, o_W, o_Impl, o_ShowRuntime); // Validate input
@@ -41,16 +41,16 @@ void ConsoleUI::printSolution(const Solution& solution) const
 void ConsoleUI::checkInput(int& i_L, int& i_S, int& i_W, int& i_Impl, bool& i_ShowRuntime)
 {
     if (i_L <= 0 || i_S <= 0 || i_W < 0 || i_W > i_L) {
-        throw std::invalid_argument("Invalid input: capacities must be positive and target must be within range.");
+        throw std::invalid_argument("invalid input.");
     }
     if (i_L <= i_S) {
-        throw std::invalid_argument("Invalid input: Large jug capacity must be greater than the small jug capacity.");
+        throw std::invalid_argument("invalid input.");
     }
     if (i_Impl != 1 && i_Impl != 2) {
-        throw std::invalid_argument("Invalid input: Implementation must be 1 or 2.");
+        throw std::invalid_argument("invalid input.");
     }
     if (i_ShowRuntime != 0 && i_ShowRuntime != 1) {
-        throw std::invalid_argument("Invalid input: Runtime flag must be 0 or 1.");
+        throw std::invalid_argument("invalid input.");
     }
 }
 
