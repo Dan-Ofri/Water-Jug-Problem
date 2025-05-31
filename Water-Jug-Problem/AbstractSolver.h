@@ -10,8 +10,8 @@
 class AbstractSolver {
 protected:
     int m_L, m_S, m_W;
-    JugState m_start;
-    JugState m_goal;
+    JugState m_start = { 0, 0 };
+    JugState m_goal = { m_W, 0 };
 
 public:
     AbstractSolver(int L, int S, int W)
@@ -20,7 +20,7 @@ public:
 
     virtual ~AbstractSolver() = default;
 
-    virtual std::vector<Solution> solve() = 0;
+    virtual Solution solve() = 0;
 
 protected:
     std::vector<std::pair<eOperationType, JugState>> getNextStates(const JugState& state) const;

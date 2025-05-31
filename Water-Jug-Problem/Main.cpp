@@ -16,7 +16,7 @@ int main()
 	auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
 	if (runtime)
 	{
-		std::cout << "Function took " << duration.count() << "microseconds." << std::endl;
+		algorithmManager.printRuntime(duration.count());
 	}
 	return 0;
 }

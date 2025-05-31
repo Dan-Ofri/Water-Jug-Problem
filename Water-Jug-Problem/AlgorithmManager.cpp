@@ -2,15 +2,20 @@
 
 bool AlgorithmManager::Run()
 {
-	ConsoleUI consoleUI;
 	int impl;
 	bool showRuntime;
-
-	consoleUI.ReadInput(m_L, m_S, m_W, impl, showRuntime);
-
+	try
+	{
+	m_consoleUI.ReadInput(m_L, m_S, m_W, impl, showRuntime);
 	auto solver = createSolver(impl);
-
-	solver->solve(m_L, m_S, m_W);
+	Solution solution = solver->solve();
+	m_consoleUI.printSolution(solution);
+	}
+	catch (const std::invalid_argument& e)
+	{
+		std::cout << e.what() << std::endl;
+		exit(1);
+	}
 
 	return showRuntime;
 }
@@ -22,4 +27,8 @@ std::unique_ptr<AbstractSolver> AlgorithmManager::createSolver(int impl) const {
 		return std::make_unique<BFSLazySolver>(m_L, m_S, m_W);
 	else
 		throw std::invalid_argument("invalid input");
+}
+
+void AlgorithmManager::printRuntime(long long runtime) const {
+	m_consoleUI.printRuntime(runtime);
 }

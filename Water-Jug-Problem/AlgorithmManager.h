@@ -12,6 +12,7 @@ class AlgorithmManager
     int m_L;
     int m_S;
     int m_W;
+    ConsoleUI m_consoleUI;
 
 public:
     /*AlgorithmManager(int i_L, int i_S, int i_W)
@@ -21,4 +22,6 @@ public:
     bool Run();
 
     std::unique_ptr<AbstractSolver> createSolver(int impl) const;
+    void printRuntime(long long runtime) const;
+
 };

@@ -10,7 +10,7 @@ struct Step
 	JugState resultState;
 
 	std::string toString() const {
-		return OpTypeToString(operation) + " " + stateToString(resultState);
+		return OpTypeToString(operation);
 	}
 
     std::string OpTypeToString(eOperationType i_op) const {
