@@ -1,9 +1,9 @@
-#pragma once  
-#include <vector>  
-#include <utility>  
-#include <list> 
+#pragma once
+#include <vector>
+#include <utility>
+#include <list>
 #include <algorithm>
-#include "JugState.h"  
+#include "JugState.h"
 
 class DirectedGraph
 {
@@ -13,5 +13,5 @@ public:
 	int StateToIndex(const JugState& state, int s) const; // Get index for a state
 	void MakeEmptyGraph(int n); // Initialize empty graph with n nodes
 	void AddEdge(const JugState& u, const JugState& v, int s); // Add directed edge u -> v
-	std::list<JugState> GetAdjList(const JugState& u, int s) const; // Get adj list for state u
+	const std::list<JugState>& GetAdjList(const JugState& u, int s) const; // Get adj list for state u (FIXED: return by const reference)
 };
